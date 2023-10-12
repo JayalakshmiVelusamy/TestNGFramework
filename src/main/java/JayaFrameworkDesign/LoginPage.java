@@ -25,12 +25,18 @@ public class LoginPage extends CommonUtiltiy {
 	@FindBy(id="userPassword") WebElement password;
 	@FindBy(id="login") WebElement loginButton;
 	
-	public void LoginintoPage(String Usernamevalue, String Passwordvalue)
+	public void Homepage(String Usernamevalue, String Passwordvalue)
 	{
 		WaitforElementPresence(username);
 		username.sendKeys(Usernamevalue);
 		password.sendKeys(Passwordvalue);
 		loginButton.click();
+		return;
+	}
+	
+	public void gotoPage()
+	{
+		driver.get("https://rahulshettyacademy.com/client");
 		return;
 	}
 	
